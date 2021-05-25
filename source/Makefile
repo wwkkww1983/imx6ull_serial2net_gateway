@@ -36,9 +36,13 @@ cgi=	index1.cgi \
 	dtu.cgi
 
 
-all:	$(obj) $(main_exe) $(cgi_obj) $(cgi)
+all:	mkdir $(obj) $(main_exe) $(cgi_obj) $(cgi)
 
 .PHONY : all
+
+mkdir:
+	mkdir $(main_tar)
+	mkdir $(cgi_tar)
 
 $(obj): %.o: %.c
 	$(CC) $(CFLAGS) $(LDFLAGS) -c $< -o $@ $(SQLFLAGS)
@@ -64,3 +68,5 @@ clean :
 	rm $(main_tar)/*
 	rm $(cgi_src)/*.o
 	rm $(cgi_tar)/*
+	rmdir $(main_tar)
+	rmdir $(cgi_tar)
