@@ -14,10 +14,12 @@ ifconfig eth0 $eth0IP up
 
 ifconfig eth1 $eth1IP up
 
+###4G模块拨号###
 rm /var/lock/LCK..ttyUSB2
 cd /etc/ppp
 ./pppd call wcdma &
 sleep 7 
+################
 
 cd `dirname $0`
 

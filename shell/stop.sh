@@ -21,7 +21,9 @@ cd `dirname $0`
 
 sleep 1
 
+kill_process modbusTCPRTU
 kill_process tcp_pthrgh
+kill_process udp_pthrgh
 
 exit
 

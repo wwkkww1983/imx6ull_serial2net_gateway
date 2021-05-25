@@ -102,16 +102,16 @@ int main(void)
 	else if(strcmp(getdtustatusbuf,"Stop")==0){
                 switch(dtu_mode){
                         case 1 :
-                                cmd = "../shell/stop_TCP_pthrgh.sh";
+                                cmd = "../shell/stop.sh";
                                 break;
                         case 2 :
-                                cmd = "../shell/stop_UDP_pthrgh.sh";
+                                cmd = "../shell/stop.sh";
                                 break;
                         case 3 :
-                                cmd = "../shell/stop_modbusTCPRTU.sh";
+                                cmd = "../shell/stop.sh";
                                 break;
                         default :
-                                cmd = "../shell/stop_TCP_pthrgh.sh";
+                                cmd = "../shell/stop.sh";
                                 break;
                 }
 	}
