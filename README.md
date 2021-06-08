@@ -1,4 +1,3 @@
-# serial2net-for-topeet-imx6ull-board
 基于迅为imx6ull板的串口网络网关
 
 目前支持:\
